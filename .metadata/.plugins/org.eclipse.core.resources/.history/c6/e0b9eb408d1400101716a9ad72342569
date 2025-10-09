@@ -1,0 +1,20 @@
+package ejercicio1;
+
+import java.io.File;
+
+public class EjercicioB1 
+{
+	public static void main(String[] args) 
+	{
+		int max,min;
+		System.out.println("-- Números máximo y mínimo del archivo numeros.txt --");
+	}
+	
+	private static int min(String ruta)
+	{
+		File archivo = new File(ruta);
+		int numMin = 0;
+		
+		return numMin;
+	}
+}

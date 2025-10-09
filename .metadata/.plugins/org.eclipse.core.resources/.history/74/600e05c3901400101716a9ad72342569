@@ -1,0 +1,8 @@
+package ejercicio2;
+
+public class Alumno
+{
+	private String nombre;
+	private String apellidos;
+	private int[] notas;
+}

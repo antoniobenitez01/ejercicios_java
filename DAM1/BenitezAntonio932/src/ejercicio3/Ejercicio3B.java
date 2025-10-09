@@ -1,0 +1,112 @@
+package ejercicio3;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+/*
+ * Clase principal que hace uso de las clases
+ * File, FileWriter y Scanner para 
+ * crear un programa que ordena un archivo de una ruta de lectura
+ * introducida por teclado y lo escribe en un nuevo archivo en
+ * la ruta de escritura introducida por teclado
+ * Exceptions: IOException, FileNotFoundException
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 08/04/2025
+ */
+public class Ejercicio3B 
+{
+	public static void main(String[] args) 
+	{
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		System.out.println("Introduzca la ruta de lectura.");
+		String lectura = entradaTeclado.nextLine();
+		
+		System.out.println("Introduzca la ruta de escritura.");
+		String escritura = entradaTeclado.nextLine();
+		
+		System.out.println("Ordenando archivo ...");
+		ordenarArchivo(lectura, escritura);
+	}
+	
+	//ORDENAR ARCHIVO - Recoge una ruta de lectura y de escritura y crea un nuevo archivo con las líneas ordenadas
+	private static void ordenarArchivo(String lectura, String escritura)
+	{
+		File archivo = new File(lectura);
+		ArrayList<String> lineas = importarLineas(archivo);
+		if(lineas != null)
+		{
+			if(!lineas.isEmpty())
+			{
+				exportarLista(lineas, escritura);
+				System.out.println("El archivo se ha ordenado correctamente.");	
+			}else
+			{
+				System.out.println("El archivo no tiene líneas para exportar.");
+			}
+		}
+	}
+	
+	//IMPORTAR LINEAS - Recoge un objeto Scanner y devuelve una lista de las lineas leidas con el objeto Scanner
+	private static ArrayList<String> importarLineas(File archivo)
+	{
+		Scanner reader = null;
+		ArrayList<String> lineas = null;
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(reader != null)
+		{
+			 lineas = new ArrayList<String>();
+			while(reader.hasNextLine())
+			{
+				lineas.add(reader.nextLine());
+			}
+			lineas.sort(null);
+		}
+		return lineas;
+	}
+	
+	//EXPORTAR LISTA - Recoge una lista y una ruta y la exporta al archivo indicado en la ruta
+	private static void exportarLista(ArrayList<String> lineas, String ruta)
+	{
+		FileWriter writer = null;
+		try 
+		{
+			writer = new FileWriter(ruta, true);
+		} catch (IOException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(writer != null)
+		{
+			for(String i: lineas)
+			{
+				try 
+				{
+					writer.write(String.format("%s\n", i));
+				} catch (IOException e) 
+				{
+					System.out.printf("%s\n", e.getMessage());
+				}
+			}
+		}else
+		{
+			System.out.println("El archivo de escritura no se ha encontrado o no es válido.");
+		}
+		try 
+		{
+			writer.close();
+		} catch (IOException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+	}
+}

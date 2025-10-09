@@ -1,0 +1,6 @@
+# MySQL Properties
+ip=localhost
+port=3306
+dbname=ejerciciomysql
+user=root
+password=QJUMUY

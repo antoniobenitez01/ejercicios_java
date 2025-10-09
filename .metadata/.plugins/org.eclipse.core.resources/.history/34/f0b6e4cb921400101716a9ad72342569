@@ -1,0 +1,14 @@
+package ejercicio2;
+
+import java.util.Comparator;
+
+public class ComparatorAlumno_Notas implements Comparator<Alumno>
+{
+	@Override
+	public int compare(Alumno o1, Alumno o2) 
+	{
+		int resultado = 0;
+		
+		return resultado;
+	}
+}

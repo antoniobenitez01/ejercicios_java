@@ -1,0 +1,31 @@
+package ejercicio2;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Llamada 
+{
+	public enum Tipos {ENTRANTE, SALIENTE};
+	private LocalDateTime fechahora;
+	private Tipos tipo;
+	
+	public Llamada(LocalDateTime fechahora, Tipos tipo)
+	{
+		this.fechahora = fechahora;
+		this.tipo = tipo;
+	}
+	
+	public String toString()
+	{
+		return String.format("Fecha y hora: %s - Tipo: %s",
+				dateTimeFormat(this.fechahora), this.tipo.toString());
+	}
+	
+	//DATE FORMAT - Introduce un objeto LocalDate por parámetro y lo devuelve formateado como un String
+	protected static String dateFormat(LocalDateTime dateTime)
+	{
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		return dateTime.format(formato);
+	}
+}

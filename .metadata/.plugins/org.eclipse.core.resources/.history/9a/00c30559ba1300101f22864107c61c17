@@ -1,0 +1,41 @@
+package ejercicio5;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class EjercicioA5 
+{
+	public static void main(String[] args) 
+	{
+		/*Prueba la función borrando las carpetas: ‘Documentos/Fotografias’, ‘Documentos/Libros’ y
+		‘Documentos’ (es decir, tres llamadas a la función, en ese orden).*/
+		
+		File carpeta = new File("Documentos/Fotografias");
+		borrarTodo(carpeta);
+	}
+	
+	private static boolean borrarTodo(File f) throws FileNotFoundException
+	{
+		boolean resultado = false;
+		if(!f.exists())
+		{
+			throw new FileNotFoundException("El archivo introducido no existe.");
+		}
+		if(f.isFile())
+		{
+			f.delete();
+			resultado = true;
+		}
+		else
+		{
+			File[] archivos = f.listFiles();
+			for(int i=0; i<archivos.length;i++)
+			{
+				borrarTodo(archivos[i]);		
+			}
+			f.delete();
+			resultado = true;
+		}
+		return resultado;
+	}
+}

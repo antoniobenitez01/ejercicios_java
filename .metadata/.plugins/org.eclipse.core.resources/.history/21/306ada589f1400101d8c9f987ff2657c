@@ -1,0 +1,27 @@
+package ejercicio5;
+
+import java.io.File;
+
+public class Ejercicio5B 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n - Creando diccionario -\n");
+		File diccionario = new File("Documentos/Diccionario");
+		if(!diccionario.exists())
+		{
+			diccionario.mkdir();
+		}
+		for(int i=65; i<91;i++)
+		{
+			char caracter = (char) i;
+			File nuevoArchivo = new File(String.format("Documentos/Diccionario/%c.txt", caracter));
+			importarLetra(nuevoArchivo, caracter);
+		}
+	}
+	
+	private static void importarLetra(File archivo, char letra)
+	{
+		FileWriter writer = new FileWriter(archivo);
+	}
+}

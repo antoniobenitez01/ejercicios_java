@@ -1,0 +1,62 @@
+package ejercicio2;
+
+import java.util.ArrayList;
+/*
+ * Clase que representa a un Alumno
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 08704/2025
+ */
+public class Alumno
+{
+	
+// ATRIBUTOS ------------------------------------------------
+	
+	private String nombre;
+	private String apellidos;
+	private ArrayList<Integer> notas;
+	private double media;
+	
+// CONSTRUCTORES -------------------------------------------
+	
+	//Constructor maestro (2 parámetros)
+	public Alumno(String nombre, String apellidos)
+	{
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.notas = new ArrayList<Integer>();
+		this.media = 0;
+	}
+	
+// GETTERS -------------------------------------------------
+	
+	public double getMedia()
+	{
+		return this.media;
+	}
+	
+// MÉTODOS --------------------------------------------------
+	
+	//AÑADIR NOTA - Añade una nota a la lista de notas del Alumno
+	public void anadirNota(int nota)
+	{
+		this.notas.add(Integer.valueOf(nota));
+	}
+	
+	//UPDATE MEDIA - Actualiza la media del Alumno en base a su lista de notas
+	public void updateMedia()
+	{
+		double media = 0;
+		for(Integer i: this.notas)
+		{
+			media += i;
+		}
+		media = media / this.notas.size();
+		this.media = media;
+	}
+	
+	//TO STRING - Devuelve un objeto String con la información detallada del Alumno
+	public String toString()
+	{
+		return String.format("Nombre: %s - Apellidos: %s - Nota media: %.2f", this.nombre, this.apellidos, this.media);
+	}
+}

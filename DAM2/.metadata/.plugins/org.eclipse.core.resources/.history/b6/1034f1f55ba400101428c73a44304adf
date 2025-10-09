@@ -1,0 +1,17 @@
+package hilos;
+
+public class TareaHilo implements Runnable
+{
+	private String threadName;
+	
+	public TareaHilo(String nombre) 
+	{
+		
+	}
+	
+	@Override
+	public void run()
+	{
+		
+	}
+}

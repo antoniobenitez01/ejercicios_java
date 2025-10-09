@@ -1,0 +1,31 @@
+package hilos;
+
+public class TareaHilo implements Runnable
+{
+	private String threadName;
+	
+	public TareaHilo(String nombre) 
+	{
+		this.threadName = nombre;
+		System.out.println("Creando " + this.threadName);
+	}
+	
+	@Override
+	public void run()
+	{
+		System.out.println("Ejecutando " + this.threadName);
+		try
+		{
+			//El hilo realiza una tarea sencilla: contar
+			for(int i=01; i<=5;i++)
+			{
+				System.out.println("Hilo: " + this.threadName + ", Contador: " + i);
+				//Hace una pequeña pausa para simular trabajo y mostrar concurrencia
+				Thread.sleep(2000);
+			}
+		}catch(InterruptedException e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+}

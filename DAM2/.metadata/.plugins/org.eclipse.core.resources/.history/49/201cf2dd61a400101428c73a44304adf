@@ -1,0 +1,51 @@
+package hilos;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		//RECOGIENDO NOMBRES POR TECLADO ---------------------
+		Scanner entrada = new Scanner(System.in);
+		String[] nombres = new String[3];
+		for(int i=0;i<3;i++) 
+		{
+			System.out.println(String.format("Introduzca el nombre Nº%d por teclado.", i+1));
+			nombres[i] = entrada.nextLine();
+		}
+		// CREANDO OBJETOS TAREATHREAD -----------------------
+		TareaThread tt1 = new TareaThread(nombres[0]);
+		TareaThread tt2 = new TareaThread(nombres[1]);
+		TareaThread tt3 = new TareaThread(nombres[2]);
+		// CREANDO OBJETOS THREAD ----------------------------
+		Thread t1 = new Thread(tt1);
+		Thread t2 = new Thread(tt2);
+		Thread t3 = new Thread(tt3);
+		// CORRIENDO OBJETOS THREAD --------------------------
+		List<Thread> threads = new ArrayList<>();
+		long start = System.currentTimeMillis();
+		System.out.println("SYSTEM START - CURRENT TIME MILLIS = " + start);
+		t1.start();
+		threads.add(t1);
+		t2.start();
+		threads.add(t2);
+		t3.start();
+		threads.add(t3);
+		for (Thread t : threads) 
+		{
+		    try 
+		    {
+				t.join();
+			} catch (InterruptedException e) 
+		    {
+				System.out.println(e.getMessage());
+			}
+		}
+		long stop = System.currentTimeMillis();
+		System.out.println("SYSTEM STOP - CURRENT TIME MILLIS = " + stop);
+		System.out.println("CÁLCULO DE TIEMPO TOTAL EN SEGUNDOS = " + ((stop - start) / 1000));
+	}
+}

@@ -1,0 +1,10 @@
+package configuracion;
+
+public class List {
+
+	public static void main(String[] args) 
+	{
+		Properties ps = new Properties();
+	}
+
+}

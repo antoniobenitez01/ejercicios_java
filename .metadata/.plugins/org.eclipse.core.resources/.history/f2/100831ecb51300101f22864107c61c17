@@ -1,0 +1,54 @@
+package ejercicio3;
+
+import java.io.File;
+
+public class EjercicioA3 
+{
+	public static void main(String[] args) 
+	{
+		// REINICIO DE NOMBRES
+		File documentos = new File("DOCS");
+		documentos.renameTo(new File("Documentos"));
+		
+		File fotografias = new File("Documentos/FOTOS");
+		fotografias.renameTo(new File("Documentos/Fotografias"));
+		
+		File libros = new File("Documentos/LECTURAS");
+		libros.renameTo(new File("Documentos/Libros"));
+		// *******************
+		
+		/*Cambiar el nombre de la carpeta ‘Documentos’ a ‘DOCS’, el de la carpeta ‘Fotografias’ a
+		‘FOTOS’ y el de la carpeta ‘Libros’ a ‘LECTURAS’*/
+		documentos = new File("Documentos");
+		documentos.renameTo(new File("DOCS"));
+		
+		fotografias = new File("DOCS/Fotografias");
+		fotografias.renameTo(new File("DOCS/FOTOS"));
+		
+		libros = new File("DOCS/Libros");
+		libros.renameTo(new File("DOCS/LECTURAS"));
+		/*Cambiar el nombre de todos los archivos de las carpetas FOTOS y LECTURAS quitándole la
+		extensión. Por ejemplo, ‘astronauta.jpg’ pasará a llamarse ‘astronauta’.*/
+		
+		File fotos = new File("DOCS/FOTOS");
+		File[] archFotos = fotos.listFiles();
+		for(int i=0; i<archFotos.length;i++)
+		{
+			File nuevoArchivo = new File(String.format("DOCS/FOTOS/%s", 
+					archFotos[i].getName().substring(0, archFotos[i].getName().length() - 4)));
+			archFotos[i].renameTo(nuevoArchivo);
+		}
+		File lecturas = new File("DOCS/LECTURAS");
+		File[] archLecturas = lecturas.listFiles();
+	}
+	
+	private static void removerExtension(File[] archivos)
+	{
+		for(int i=0; i<archivos.length;i++)
+		{
+			File nuevoArchivo = new File(String.format("DOCS/FOTOS/%s", 
+					archivos[i].getName().substring(0, archivos[i].getName().length() - 4)));
+			archivos[i].renameTo(nuevoArchivo);
+		}
+	}
+}

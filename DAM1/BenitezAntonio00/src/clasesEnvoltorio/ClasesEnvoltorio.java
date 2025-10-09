@@ -1,0 +1,26 @@
+/*
+ * BOOLEAN - CHARACTER - INTEGER
+ */
+package clasesEnvoltorio;
+
+public class ClasesEnvoltorio 
+{
+
+	public static void main(String[] args) 
+	{
+		Boolean oBoolean1 = new Boolean(true), oBoolean2 = new Boolean(false);
+		Character oCharacter1 = new Character('A');
+		Integer oInteger1 = new Integer(5);
+		
+		System.out.println(oBoolean1.toString());
+		System.out.println(oBoolean2.toString());
+		System.out.println(oBoolean1.equals(oBoolean2));
+		
+		System.out.println(oCharacter1.toString());
+		System.out.println(oCharacter1.toLowerCase(oCharacter1));
+		
+		System.out.println(oInteger1.toString());
+		System.out.println(oInteger1.doubleValue());
+	
+	}
+}

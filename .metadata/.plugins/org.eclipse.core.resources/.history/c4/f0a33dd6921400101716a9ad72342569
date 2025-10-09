@@ -1,0 +1,64 @@
+package ejercicio2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+/*
+ * Clase principal que hace uso de la clase creada
+ * Alumno y la clase File para importar objetos
+ * desde un archivo de texto
+ * Exceptions: FileNotFoundException
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 08/04/2025
+ */
+public class EjercicioB2 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n--- ALUMNOS ---\n");
+		ArrayList<Alumno> alumnado = new ArrayList<Alumno>();
+		importarAlumnos(alumnado, "Documentos/alumnos_notas.txt");
+		if(!alumnado.isEmpty())
+		{
+			for(Alumno i: alumnado)
+			{
+				System.out.printf("%s\n", i.toString());
+			}
+		}else
+		{
+			System.out.println("El alumnado esta vacío.");
+		}
+	}
+	
+	//IMPORTAR ALUMNOS - Recoge una lista de alumnos y una ruta para importar todos los alumnos del archivo de texto
+	public static void importarAlumnos(ArrayList<Alumno> alumnado, String ruta)
+	{
+		File archivo = new File(ruta);
+		Scanner reader = null;
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(reader != null)
+		{
+			while(reader.hasNextLine())
+			{
+				String[] datos = reader.nextLine().split(" ");
+				Alumno nuevo = new Alumno(datos[0], datos[1]);
+				for(int i=2; i<datos.length;i++)
+				{
+					nuevo.anadirNota(Integer.parseInt(datos[i]));
+				}
+				nuevo.updateMedia();
+				alumnado.add(nuevo);
+			}
+		}else
+		{
+			System.out.println("Se ha producido un error y el programa no se ha ejecutado.");
+		}		
+	}
+}

@@ -1,0 +1,26 @@
+package ejercicio2;
+
+import java.util.Comparator;
+/*
+ * Clase Comparator que compara objetos 
+ * de la clase creada Alumno por su nota media
+ */
+public class ComparatorAlumno_Notas implements Comparator<Alumno>
+{
+	@Override
+	public int compare(Alumno o1, Alumno o2) 
+	{
+		int resultado = 0;
+		if(o1.getMedia() > o2.getMedia())
+		{
+			resultado = -1;
+		}else if(o1.getMedia() < o2.getMedia())
+		{
+			resultado = 1;
+		}else
+		{
+			resultado = 0;
+		}
+		return resultado;
+	}
+}

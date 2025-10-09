@@ -1,0 +1,23 @@
+package sincronizacion;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		try
+		{
+			if(args.length > 0)
+			{
+				ProcessBuilder argumento = new ProcessBuilder(args);
+				Process argumentop = argumento.start();
+				System.out.println(String.format("Exit value: %d", argumentop.waitFor()));
+			}else
+			{
+				System.out.println("No se ha introducido ningún argumento.");
+			}
+		}catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+}

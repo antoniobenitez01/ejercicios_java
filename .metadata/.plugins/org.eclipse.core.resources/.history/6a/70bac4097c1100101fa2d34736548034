@@ -1,0 +1,9 @@
+package ejercicio2;
+
+public class Llamada 
+{
+	public enum Tipos {ENTRANTE, SALIENTE};
+	private String telefono;
+	private LocalDate fecha;
+	private 
+}

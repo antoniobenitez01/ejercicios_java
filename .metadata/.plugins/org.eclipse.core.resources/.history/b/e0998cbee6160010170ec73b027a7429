@@ -1,0 +1,88 @@
+package ejercicio3;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+import com.thoughtworks.xstream.XStream;
+
+/**
+ * Clase que permite serializar un objeto Recetario al formato XML y 
+ viceversa.
+ *   
+ * @author profe
+ */
+public class RecetarioXML {
+    
+     // Ruta del archivo donde se lee y escribe el objeto Recetario
+    private String rutaArchivo;
+    
+    
+    // Objeto Xstream que permite la L/E con archivos XML
+    private XStream xstream;
+
+    /**
+     * Método constructor
+     * @param nombreArchivo Ruta del archivo donde se lee y escribe el objeto Recetario
+     */
+    public RecetarioXML(String nombreArchivo) {
+        this.rutaArchivo = nombreArchivo;
+        this.xstream = new XStream();
+        //Permite asignar privilegios para poder operar con los archivos XML
+        this.xstream.allowTypesByWildcard(new String[] { 
+            "ejercicio3.**",
+            "com.mydomain.utilitylibraries.**"
+        });
+    }
+
+    
+    // -----------------------------------------------------
+    // Ejercicio 3: Métodos que debe implementar el alumnado
+    // -----------------------------------------------------
+    
+    // 3.1. Método escribir()
+    /**
+     * Método que escribe, en un archivo de texto, un objeto Recetario serializable.
+     * @param recetario Objeto Recetario serializable para almacenar en el archivo de texto.
+     */    
+    public void escribir(Recetario recetario) 
+    {
+    	File archivo = new File(this.rutaArchivo);
+    	try
+    	{
+    		FileWriter writer = new FileWriter(archivo);
+    		writer.write(this.xstream.toXML(recetario));
+    		writer.close();
+    	}catch(IOException e)
+    	{
+    		System.out.printf("%s\n", e.getMessage());
+    	}
+    }
+    
+    // 3.2. Método leer()
+     /**
+     * Método que lee, desde un archivo de texto, un objeto Recetario serializado.
+     * @return Objecto Recetario que estaba almacenado en el archivo de texto.
+     */
+    public Recetario leer() 
+    {
+    	File archivo = new File(this.rutaArchivo);
+    	Recetario recetarioXML;
+    	try
+    	{
+    		Scanner reader = new Scanner(archivo);
+    		String cadenaXML = "";
+    		while(reader.hasNextLine())
+    		{
+    			cadenaXML += reader.nextLine();
+    		}
+    		recetarioXML = (Recetario) this.xstream.fromXML(cadenaXML);
+    	}catch(FileNotFoundException e)
+    	{
+    		System.out.printf("%s\n", e.getMessage());
+    	}
+        return null; // Sustituir este return por el código que resuelve el ejercicio
+    }
+}

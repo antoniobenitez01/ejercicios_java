@@ -1,0 +1,24 @@
+***********************************************************************
+LIBRO DE RECETAS
+***********************************************************************
+NOMBRE DE LA RECETA: Ensalada de Pimiento Dulce
+TIPO DE PLATO: Ensalada
+FECHA DE CREACIÓN: 2010-01-23
+INGREDIENTES: [pimientos dulces, cebolla, vinagre, aceite, sal, pimienta]
+INSTRUCCIONES:
+
+***********************************************************************
+NOMBRE DE LA RECETA: Calabacita fantástica
+TIPO DE PLATO: Acompañamiento
+FECHA DE CREACIÓN: 2000-02-02
+INGREDIENTES: [calabacitas, ajo en polvo, sal, queso parmesano]
+INSTRUCCIONES:
+
+***********************************************************************
+NOMBRE DE LA RECETA: Pudin de almendras y arroz
+TIPO DE PLATO: Postre
+FECHA DE CREACIÓN: 2003-12-28
+INGREDIENTES: [leche de almendras, arroz blanco, azúcar, vainilla, extracto de almendras, canela, almendras tostadas]
+INSTRUCCIONES:
+
+***********************************************************************

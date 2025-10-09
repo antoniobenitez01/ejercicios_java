@@ -1,0 +1,38 @@
+package concurrencia;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.io.*;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		try 
+		{
+			Scanner reader = new Scanner(new File("lista.txt"));
+			LinkedList<Process> procesos = new LinkedList<Process>();
+			while(reader.hasNextLine())
+			{
+				String linea = reader.nextLine();
+				System.out.println(String.format("Artista encontrado = %s",linea));
+				ProcessBuilder pb = new ProcessBuilder("java","-jar","clientemusical.jar",linea);
+				System.out.println("Empezando proceso ...");
+				Process p = pb.start();
+				procesos.add(p);
+				System.out.println("Proceso añadido a lista de procesos.");
+			}
+			reader.close();
+			for(Process p : procesos)
+			{
+				p.waitFor();
+			}
+		}catch(IOException e)
+		{
+			System.out.println(e.getMessage());
+		}catch(InterruptedException ie)
+		{
+			System.out.println(ie.getMessage());
+		}
+	}
+}

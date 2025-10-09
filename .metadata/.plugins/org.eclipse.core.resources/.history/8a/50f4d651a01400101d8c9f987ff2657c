@@ -1,0 +1,61 @@
+package ejercicio5;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ejercicio5B 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n - Creando diccionario -\n");
+		File diccionario = new File("Documentos/Diccionario");
+		if(!diccionario.exists())
+		{
+			diccionario.mkdir();
+		}
+		for(int i=65; i<91;i++)
+		{
+			char caracter = (char) i;
+			File nuevoArchivo = new File(String.format("Documentos/Diccionario/%c.txt", caracter));
+			crearArchivoLetra(nuevoArchivo, caracter);
+		}
+	}
+	
+	private static void crearArchivoLetra(File archivo, char letra)
+	{
+		FileWriter writer = null;
+		try 
+		{
+			writer = new FileWriter(archivo, true);
+		} catch (IOException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(writer != null)
+		{
+			String contenido = importarContenido(letra);
+		}
+	}
+	
+	private static String importarContenido(char letra)
+	{
+		File archivo = new File("Documentos/diccionario.txt");
+		Scanner reader = null;
+		String resultado = "";
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(reader != null)
+		{
+			
+		}
+		return resultado;
+	}
+}

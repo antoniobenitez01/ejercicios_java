@@ -1,0 +1,10 @@
+package ejercicio3;
+
+public class EjercicioA3 
+{
+	public static void main(String[] args) 
+	{
+		/*Cambiar el nombre de la carpeta ‘Documentos’ a ‘DOCS’, el de la carpeta ‘Fotografias’ a
+		‘FOTOS’ y el de la carpeta ‘Libros’ a ‘LECTURAS’*/
+	}
+}

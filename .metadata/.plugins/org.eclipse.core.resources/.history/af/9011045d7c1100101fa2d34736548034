@@ -1,0 +1,24 @@
+package ejercicio2;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class Llamada 
+{
+	public enum Tipos {ENTRANTE, SALIENTE};
+	private LocalDateTime fechahora;
+	private Tipos tipo;
+	
+	public Llamada(LocalDateTime fechahora, Tipos tipo)
+	{
+		this.fecha = fecha;
+		this.hora = hora;
+		this.tipo = tipo;
+	}
+	
+	public String toString()
+	{
+		return String.format("", null);
+	}
+}

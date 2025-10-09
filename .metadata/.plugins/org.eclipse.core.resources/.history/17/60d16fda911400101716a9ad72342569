@@ -1,0 +1,43 @@
+package ejercicio2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EjercicioB2 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n--- ALUMNOS ---\n");
+		File archivo = new File("alumnos_notas.txt");
+		Scanner reader = null;
+		ArrayList<Alumno> alumnado = new ArrayList<Alumno>();
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(reader != null)
+		{
+			
+		}else
+		{
+			System.out.println("Se ha producido un error y el programa no se ha ejecutado.");
+		}
+	}
+	
+	public static void importarAlumnos(ArrayList<Alumno> alumnado, Scanner reader)
+	{
+		
+		String[] datos = cadena.split(" ");
+		Alumno nuevo = new Alumno(datos[0], datos[1]);
+		for(int i=2; i<datos.length;i++)
+		{
+			nuevo.anadirNota(Integer.parseInt(datos[i]));
+		}
+		
+	}
+}

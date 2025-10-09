@@ -1,0 +1,28 @@
+package ejercicio5;
+
+import java.io.File;
+
+public class EjercicioA5 
+{
+	public static void main(String[] args) 
+	{
+		/*Prueba la función borrando las carpetas: ‘Documentos/Fotografias’, ‘Documentos/Libros’ y
+		‘Documentos’ (es decir, tres llamadas a la función, en ese orden).*/
+	}
+	
+	private static boolean borrarTodo(File f)
+	{
+		if(f.isFile())
+		{
+			f.delete();
+		}
+		else
+		{
+			File[] archivos = f.listFiles();
+			for(int i=0; i<archivos.length;i++)
+			{
+				borrarTodo(archivos[i]);		
+			}
+		}
+	}
+}

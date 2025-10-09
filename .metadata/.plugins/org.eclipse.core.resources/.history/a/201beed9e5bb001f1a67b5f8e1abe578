@@ -1,0 +1,48 @@
+package ejercicio1;
+
+import libtarea3.Dado;
+
+public class Ejercicio1 
+{
+
+	public static void main(String[] args) 
+	{
+		long sumaGlobal = 0, valorMaximo = (int) ((Math.random()*31)+30);
+		Dado jugador1 = new Dado(), jugador2 = new Dado(), jugador3 = new Dado();
+		int [][] lanzamientos = new int[3][15];
+		int [] sumaLanzamientos = new int[3];
+		
+		System.out.printf("LANZAMIENTO DE DADOS"+"\n---------------------------------------------" + "\n");
+		System.out.printf("Número máximo de puntos: %d", valorMaximo);
+		do
+		{
+			sumaGlobal += lanzamientos [0][(int) jugador1.getNumeroLanzamientos()] = jugador1.lanzar();
+			sumaGlobal += lanzamientos [1][(int) jugador2.getNumeroLanzamientos()] = jugador2.lanzar();
+			sumaGlobal += lanzamientos [2][(int) jugador3.getNumeroLanzamientos()] = jugador3.lanzar();
+		}while(sumaGlobal < valorMaximo);
+		
+		for(int dados=0; dados<lanzamientos.length; dados++)
+		{
+			for(int lanzar=0; lanzar<jugador1.getNumeroLanzamientos(); lanzar++)
+			{
+				System.out.print(lanzamientos[dados][lanzar] + " ");
+				sumaLanzamientos[dados] += lanzamientos[dados][lanzar];
+			}
+			System.out.println("");
+		}
+	}
+
+	//MÉTODO - Recoge los tres dados para devolver el ganador con más puntuación
+	public static int dadoMayor(int [] sumaLanzamientos)
+	{
+		int dadoMayor = 0;
+		for(int dados = 1; dados<sumaLanzamientos.length;dados++)
+		{
+			if(sumaLanzamientos[dadoMayor] < sumaLanzamientos[dados])
+			{
+				dadoMayor = dados;
+			}
+		}
+		return dadoMayor;
+	}
+}

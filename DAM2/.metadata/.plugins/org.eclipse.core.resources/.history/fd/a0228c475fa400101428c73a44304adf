@@ -1,0 +1,11 @@
+package hilos;
+
+public class TareaThread implements Runnable 
+{
+	private String threadName;
+	
+	public TareaThread(String threadName)
+	{
+		this.threadName = threadName;
+	}
+}

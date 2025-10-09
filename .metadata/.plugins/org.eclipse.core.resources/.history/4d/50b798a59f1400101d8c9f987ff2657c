@@ -1,0 +1,18 @@
+package ejercicio5;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Ejercicio5B 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n - Creando diccionario -\n");
+		File diccionario = new File("Documentos/Diccionario");
+		if(!diccionario.exists())
+		{
+			diccionario.mkdir();
+		}
+	}
+}

@@ -1,0 +1,30 @@
+package ejemploHerencia;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		Trabajador trabajador1 = new Trabajador();
+		System.out.println(trabajador1.toString());
+		
+		Programador programador1 = new Programador();
+		System.out.println("\n" + programador1.toString());
+		
+		Analista analista1 = new Analista();
+		System.out.println("\n" + analista1.toString());
+		
+		Ingeniero ingeniero1 = new Ingeniero();
+		System.out.println("\n" + ingeniero1.toString());
+		
+		System.out.printf("\nNúmero de trabajadores en total: %d \n", Trabajador.getNumeroTrabajadores());
+		
+		//======================================
+		
+		System.out.printf("\nTrabajador 1 - Nómina: %.2f" +
+						"\nProgramador 1 - Nómina: %.2f" +
+						"\nAnalista 1 - Nómina: %.2f" +
+						"\nIngeniero 1 - Nómina: %.2f",
+						trabajador1.calcularNomina(Trabajador.SALARIO_BASE_DEFAULT), programador1.calcularNomina(Trabajador.SALARIO_BASE_DEFAULT),
+						analista1.calcularNomina(Trabajador.SALARIO_BASE_DEFAULT), ingeniero1.calcularNomina(Trabajador.SALARIO_BASE_DEFAULT));
+	}
+}

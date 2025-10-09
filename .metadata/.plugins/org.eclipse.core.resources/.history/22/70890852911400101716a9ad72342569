@@ -1,0 +1,25 @@
+package ejercicio2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class EjercicioB2 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n--- ALUMNOS ---\n");
+		File archivo = new File("alumnos_notas.txt");
+		Scanner reader = null;
+		
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		
+		
+	}
+}

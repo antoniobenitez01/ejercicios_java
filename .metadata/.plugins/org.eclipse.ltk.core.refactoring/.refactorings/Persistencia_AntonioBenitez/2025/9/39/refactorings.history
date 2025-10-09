@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Vehiculo.java&apos; to &apos;AccesoFicheros_AntonioBenitez/src/accesoficheros&apos;&#x0D;&#x0A;- Original project: &apos;Persistencia_AntonioBenitez&apos;&#x0D;&#x0A;- Destination element: &apos;AccesoFicheros_AntonioBenitez/src/accesoficheros&apos;&#x0D;&#x0A;- Original element: &apos;persistencia.Vehiculo.java&apos;" description="Copy compilation unit" destination="=AccesoFicheros_AntonioBenitez/src&lt;accesoficheros" element1="/src&lt;persistencia{Vehiculo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1758548108101" units="1" version="1.0"/>
+</session>

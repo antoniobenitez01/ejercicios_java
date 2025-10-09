@@ -1,0 +1,26 @@
+1. Importa los registros contenidos en el documento notas1.txt, donde la información tiene el
+siguiente formato:
+grupo;nombre,matemáticas;lengua;física;química;inglés
+2. Muestra el número de registros que contiene.
+3. Ordena los registros por grupo y nombre.
+4. Añade el registro abajo indicado en la mitad de la lista.
+1º ESO A;Plaza Gallego, Juan;1;1;3;1;1
+5. Añade el mismo registro al principio de la lista.
+6. Importa los registros contenidos en el documento notas2.txt en una lista auxiliar.
+7. Añade la lista auxiliar al principio de la lista original.
+8. Muestra el registro que está en la primera posición de la lista.
+9. Muestra el registro que está en la última posición posición de la lista.
+10. Muestra el registro que está en la mitad de la lista.
+11. ¿Qué posición ocupa la primera ocurrencia del registro insertado?
+12. Qué posición ocupa la última ocurrencia del registro insertado?
+13. ¿El siguiente registro está en la lista? 1º ESO E;Postigo Vázquez, Salvador;3;6;5;3;4
+14. ¿Y éste? 1º ESO A;García Fernández, María;6;5;6;5;5
+15. Elimina la primera ocurrencia del registro insertado y muestra su posición y contenido.
+16. Elimina el registro que ocupa la posición media de la lista mostrando su contenido.
+17. Elimina el registro cuyo nombre es: Carrillo Segura, Félix, indicando su posición y
+contenido.
+18. Elimina el registro cuyo nombre es: Robles Ortiz, Rafael, indicando su posición y contenido.
+19. Intenta simular una pila con la lista original. Realiza dos inserciones y extracciones
+detallando su funcionamiento.
+20. Intenta simular una cola con la lista original. Realiza dos inserciones y extracciones
+detallando su funcionamiento.

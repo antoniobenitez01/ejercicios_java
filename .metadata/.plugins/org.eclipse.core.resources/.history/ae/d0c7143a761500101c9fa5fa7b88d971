@@ -1,0 +1,150 @@
+package ejercicio1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Ejercicio 1: Lectura/escritura de un recetario en ficheros de texto.
+ *
+ * @author Antonio Benítez Rodríguez
+ */
+public class Ejercicio1 
+{
+    /**
+     * Método principal.
+     *
+     * @param args argumentos que recibe el método
+     */
+    public static void main(String args[]) 
+    {
+
+        //----------------------------------------------
+        //          Declaración de variables 
+        //----------------------------------------------
+        // Constantes
+        // Variables de entrada
+        // Variables de salida
+        // Variables auxiliares
+    	
+        String rutaRecetas = System.getProperty("user.dir") + "/recursos/ListadoRecetas.txt"; 
+
+        //----------------------------------------------
+        //       Entrada de datos + Procesamiento
+        //----------------------------------------------
+        
+        //1. Se crea un objeto de tipo Recetario para albergar cada una de las recetas.
+        System.out.println("\n1. Creando objeto Recetario ...\n");
+        Recetario recetario = new Recetario();
+        System.out.printf("%s\n", recetario.toString());
+        
+        /*2. Leer el archivo de texto ListadoRecetas.txt, que contiene una receta por línea. Cada
+			 dato dentro de la receta se separa por el carácter ";".*/
+        System.out.println("\n2. Leyendo archivo ListadoRecetas.txt ...\n");
+        File listaRecetas = new File(rutaRecetas);
+        Scanner reader = null;
+        try
+        {
+        	reader = new Scanner(listaRecetas);
+        	while(reader.hasNextLine())
+        	{
+        		System.out.printf("%s\n", reader.nextLine());
+        	}
+        }catch(FileNotFoundException e)
+        {
+        	System.out.printf("%s\n",e.getMessage());
+        }
+        
+        /*3. Se extraen los datos de cada una de las recetas: nombre, tipo de plato, fecha de
+        	 creación, listado de ingredientes e instrucciones.*/
+        System.out.println("\n3-6. Extrayendo los datos de cada una de las recetas ...\n");
+        int contador = 1;
+        ArrayList<Receta> recetas = new ArrayList<Receta>();
+        try
+        {
+        	reader = new Scanner(listaRecetas);
+            while(reader.hasNextLine())
+            {
+            	//6. Una vez creado el objeto, se añade al objeto Recetario.
+            	System.out.printf("Importando receta Nº%d\n", contador);
+            	recetas.add(importarReceta(reader.nextLine()));
+            	contador++;
+            }
+        }catch(FileNotFoundException e)
+        {
+        	System.out.printf("%s\n",e.getMessage());
+        }
+        
+        /*7. Cuando todas las recetas hayan sido incluidas en el Recetario, se genera su
+			 representación textual mediante el método toString() y se escribe cada receta en el
+			 archivo de texto Recetario.txt, siguiendo el formato que se indica en el ejemplo de
+			 ejecución.*/
+        System.out.println("\n7. Mostrando contenido de objeto Recetario ...\n");
+        recetario.setRecetas(recetas);
+        System.out.printf("%s\n", recetario.toString());
+        
+        for(Receta i: recetas)
+        {
+        	exportarReceta(i, "Recetario.txt");
+        }
+    }
+    
+    private static Receta importarReceta(String linea)
+    {
+    	/*4. Se extraen los ingredientes de manera individual y se insertan en una lista. Cada
+			 ingrediente se separa por el carácter ",".*/
+    	String[] datos = linea.split(";");
+    	
+    	LocalDate fechaCreada = LocalDate.parse(datos[2]);
+    	ArrayList<String> ingredientes = importarIngredientes(datos[3]);
+    	/*5. Para cada receta generamos un objeto de tipo Receta con los datos extraídos en los
+			 puntos anteriores*/
+    	Receta recetaCreada = null;
+    	try
+    	{
+    		recetaCreada = new Receta(datos[0], datos[1], fechaCreada, ingredientes, datos[4]);
+    	}catch(NullPointerException e)
+    	{
+    		System.out.printf("%s\n", e.getMessage());
+    	}
+    	return recetaCreada;
+    }
+    
+    private static ArrayList<String> importarIngredientes(String linea)
+    {
+    	String[] datos = linea.split(",");
+    	ArrayList<String> ingredientes = new ArrayList<String>();
+    	for(int i=0; i<datos.length; i++)
+    	{
+    		ingredientes.add(datos[i]);
+    	}
+    	return ingredientes;
+    }
+    
+    private static void exportarReceta(Receta receta, String ruta)
+    {
+    	FileWriter writer;
+    	try
+    	{
+    		writer = new FileWriter(ruta, true);
+    		String recetaString = String.format("NOMBRE DE LA RECETA: %s"
+    				+ "\nTIPO DE PLATO: %s"
+    				+ "\nFECHA DE CREACIÓN:%s"
+    				+ "\nINGREDIENTES: %s"
+    				+ "\nINSTRUCCIONES:"
+    				+ "\n%s"
+    				+ "***********************************************************************\n",
+    				receta.getNombre(), receta.getTipoPlato(), r);
+    		writer.close();
+    	}catch(IOException e)
+    	{
+    		System.out.printf("%s\n", e.getMessage());
+    	}
+    	
+    }
+}

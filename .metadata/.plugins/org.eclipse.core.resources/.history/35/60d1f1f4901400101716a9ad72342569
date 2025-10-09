@@ -1,0 +1,18 @@
+package ejercicio2;
+
+import java.util.ArrayList;
+
+public class Alumno
+{
+	private String nombre;
+	private String apellidos;
+	private ArrayList<Integer> notas;
+	private double media;
+	
+	public Alumno(String nombre, String apellidos)
+	{
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.notas = new ArrayList<Integer>;
+	}
+}

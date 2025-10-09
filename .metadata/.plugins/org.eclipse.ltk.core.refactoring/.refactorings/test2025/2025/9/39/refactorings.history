@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;test2025/src/passwd&apos;&#x0D;&#x0A;- Original project: &apos;test2025&apos;&#x0D;&#x0A;- Destination element: &apos;test2025/src/passwd&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Password.java&#x0D;&#x0A;     Main.java&#x0D;&#x0A;     Herramientas.java&#x0D;&#x0A;     testMain.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;passwd" element1="/src&lt;{Password.java" element2="/src&lt;{Main.java" element3="/src&lt;{Herramientas.java" element4="/src&lt;{testMain.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1758549120246" units="4" version="1.0"/>
+</session>

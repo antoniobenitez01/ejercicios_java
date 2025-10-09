@@ -1,0 +1,61 @@
+package ejercicio1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+/*
+ * Clase que hace uso de las clases Scanner y File
+ * para mostrar por consola la información de los archivos
+ * de las rutas introducidas por teclado
+ * Excepciones: FileNotFoundException, SecurityException
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 04/04/2025
+ */
+public class EjercicioA1 
+{
+	public static void main(String[] args)
+	{
+		Scanner entradaTeclado = new Scanner(System.in);
+		String entrada = "";
+		do
+		{
+			System.out.println("Introduzca la ruta por teclado.");
+			entrada = entradaTeclado.nextLine();
+			File ruta = new File(entrada);
+			try 
+			{
+				muestraInfoRuta(ruta);
+			} catch (FileNotFoundException e) 
+			{
+				System.out.printf("%s\n", e.getMessage());
+			}			
+		}while(!entrada.isEmpty());
+		System.out.println("Apagando programa ...");
+	} 
+	
+	public static void muestraInfoRuta(File ruta) throws FileNotFoundException
+	{
+		if(ruta.isFile())
+		{
+			System.out.printf("Nombre del archivo: %s\n", ruta.getName());
+		}else if(ruta.isDirectory())
+		{
+			System.out.printf("Nombre del directorio: %s\n",ruta.getName());
+			File[] archivos = ruta.listFiles();
+			for(int i=0;i<archivos.length;i++)
+			{
+				String nombre = archivos[i].getName();
+				if(archivos[i].isFile())
+				{
+					System.out.printf("%s[A]/n", nombre);
+				}else
+				{
+					System.out.printf("%s[*]/n", nombre);
+				}
+			}
+		}else
+		{
+			throw new FileNotFoundException("La ruta introducida no es válida.");
+		}
+	}
+}

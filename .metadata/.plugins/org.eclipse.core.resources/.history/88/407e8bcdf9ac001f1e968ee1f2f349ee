@@ -1,0 +1,20 @@
+/*
+ * BOOLEAN - CHARACTER - INTEGER
+ */
+package clasesEnvoltorio;
+
+public class ClasesEnvoltorio 
+{
+
+	public static void main(String[] args) 
+	{
+		Boolean boolean1 = new Boolean(true);
+		Character character1 = new Character('A');
+		Integer integer1 = new Integer(5);
+		
+		System.out.println(character1);
+		System.out.println(character1.toLowerCase(character1));
+		System.out.println(integer1.doubleValue());
+	
+	}
+}

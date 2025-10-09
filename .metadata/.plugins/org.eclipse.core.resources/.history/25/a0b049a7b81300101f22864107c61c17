@@ -1,0 +1,50 @@
+package ejercicio4;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class EjercicioA4 
+{
+	public static void main(String[] args) 
+	{
+		/*Implementa un programa que cree, dentro de ‘Documentos’, 
+		dos nuevas carpetas: ‘Mis Cosas’ y ‘Alfabeto’.*/	
+		
+		File carpeta = new File("Documentos/Mis Cosas");
+		if(!carpeta.exists())
+		{
+			carpeta.mkdir();
+		}
+		carpeta = new File("Documentos/Alfabeto");
+		if(!carpeta.exists())
+		{
+			carpeta.mkdir();
+		}
+		
+		/*Mueve las carpetas ‘Fotografias’ y ‘Libros’ dentro de ‘Mis Cosas’.*/
+		
+		moverCarpeta("Documentos/Fotografias", "Documentos/Mis Cosas/Fotografias");
+		moverCarpeta("Documentos/Libros","Documentos/Mis Cosas/Libros");
+		
+		/*Luego crea dentro de ‘Alfabeto’ una carpeta por cada letra 
+		 * del alfabeto (en mayúsculas): ‘A’, ‘B’, ‘C’... ‘Z’.*/
+		
+		
+	}
+	
+	private static void moverCarpeta(String origen, String destino)
+	{
+		Path pOrigen = Paths.get(origen);
+		Path pDestino = Paths.get(destino);
+		try 
+		{
+		    Files.move(pOrigen, pDestino);
+		} catch (IOException e) 
+		{
+		    System.out.printf("%s\n",e.getMessage());
+		}
+	}
+}

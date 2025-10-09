@@ -1,0 +1,16 @@
+package sincronizacion;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		ProcessBuilder argumento = new ProcessBuilder(args);
+		Process argumentop = argumento.start();
+		System.out.println(String.format("Exit value: %d", argumentop.waitFor()));
+		
+		ProcessBuilder calc = new ProcessBuilder("Calc.exe");
+		System.out.println("Ejecutando 'Calc.exe' ...");
+		Process calcp = calc.start();
+		System.out.println(String.format("'Calc.exe' - Exit value: %d", calcp.waitFor()));
+	}
+}

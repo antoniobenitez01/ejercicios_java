@@ -1,0 +1,6 @@
+package ejercicio2;
+
+public class ComparatorAlumno_Notas implements Comparator<Alumno>
+{
+
+}

@@ -1,0 +1,30 @@
+package ejercicio4;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class EjercicioA4 
+{
+	public static void main(String[] args) 
+	{
+		/*Implementa un programa que cree, dentro de ‘Documentos’, 
+		dos nuevas carpetas: ‘Mis Cosas’ y ‘Alfabeto’.*/
+		FileWriter writer;
+		
+		File carpeta = new File("Documentos/Mis Cosas");
+		try 
+		{
+			writer = new FileWriter(carpeta);
+		} catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			System.out.printf("%s\n", e.getMessage());
+		}
+		
+		/*Mueve las carpetas ‘Fotografias’ y ‘Libros’ dentro de ‘Mis Cosas’.*/
+		
+		/*Luego crea dentro de ‘Alfabeto’ una carpeta por cada letra 
+		 * del alfabeto (en mayúsculas): ‘A’, ‘B’, ‘C’... ‘Z’.*/
+	}
+}

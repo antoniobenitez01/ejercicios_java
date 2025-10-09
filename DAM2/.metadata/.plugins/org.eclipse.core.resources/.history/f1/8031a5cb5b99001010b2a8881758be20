@@ -1,0 +1,19 @@
+package sincronizacion;
+
+import java.io.IOException;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		ProcessBuilder argumento = new ProcessBuilder(args);
+		try 
+		{
+			Process argumentop = argumento.start();
+			System.out.println(String.format("Exit value: %d", argumentop.waitFor()));
+		} catch (IOException | InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,17 @@
+/*
+ * BOOLEAN - CHARACTER - INTEGER
+ */
+package clasesEnvoltorio;
+
+public class ClasesEnvoltorio 
+{
+
+	public static void main(String[] args) 
+	{
+		Boolean boolean1 = new Boolean(true);
+		Character character1 = new Character('a');
+		Integer integer1 = new Integer(5);
+
+	}
+
+}

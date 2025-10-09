@@ -1,0 +1,20 @@
+package ejercicio3;
+
+import java.io.File;
+
+public class EjercicioA3 
+{
+	public static void main(String[] args) 
+	{
+		/*Cambiar el nombre de la carpeta ‘Documentos’ a ‘DOCS’, el de la carpeta ‘Fotografias’ a
+		‘FOTOS’ y el de la carpeta ‘Libros’ a ‘LECTURAS’*/
+		File documentos = new File("Documentos");
+		documentos.renameTo(new File("DOCS"));
+		
+		File fotografias = new File("Fotografias");
+		fotografias.renameTo(new File("FOTOS"));
+		
+		/*Cambiar el nombre de todos los archivos de las carpetas FOTOS y LECTURAS quitándole la
+		extensión. Por ejemplo, ‘astronauta.jpg’ pasará a llamarse ‘astronauta’.*/
+	}
+}

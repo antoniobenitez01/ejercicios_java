@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;ejemplo2&apos; to &apos;variables&apos;&#x0D;&#x0A;- Original project: &apos;BenitezAntonio00&apos;&#x0D;&#x0A;- Original element: &apos;BenitezAntonio00/src/ejemplo2&apos;&#x0D;&#x0A;- Renamed element: &apos;BenitezAntonio00/src/variables&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;ejemplo2&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;ejemplo2" name="variables" qualified="false" references="true" stamp="1727118604867" textual="false" version="1.0"/>
+</session>

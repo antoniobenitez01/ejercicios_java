@@ -1,0 +1,78 @@
+package ejercicio5;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Ejercicio5B 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("\n -- DICCIONARIO --\n");
+		File diccionario = new File("Documentos/Diccionario");
+		if(!diccionario.exists())
+		{
+			System.out.println("Creando carpeta de Diccionario ...");
+			diccionario.mkdir();
+		}
+		for(int i=65; i<91;i++)
+		{
+			char caracter = (char) i;
+			File nuevoArchivo = new File(String.format("Documentos/Diccionario/%c.txt", caracter));
+			crearArchivoLetra(nuevoArchivo, caracter);
+		}
+		//TRATAMOS EL CASO ESPECIAL "Ñ"
+		File n = new File("Documentos/Diccionario/Ñ.txt");
+		crearArchivoLetra(n, 'Ñ');
+	}
+	
+	private static void crearArchivoLetra(File archivo, char letra)
+	{
+		FileWriter writer = null;
+		try 
+		{
+			writer = new FileWriter(archivo, true);
+			String contenido = importarContenido(letra);
+			writer.write(contenido);
+		} catch (IOException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		try 
+		{
+			writer.close();
+		} catch (IOException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+	}
+	
+	private static String importarContenido(char letra)
+	{
+		File archivo = new File("Documentos/diccionario.txt");
+		Scanner reader = null;
+		String resultado = "";
+		try 
+		{
+			reader = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		if(reader != null)
+		{
+			while(reader.hasNextLine())
+			{
+				String palabra = reader.nextLine();
+				String primeraLetra = String.valueOf(palabra.charAt(0));
+				if(primeraLetra.toLowerCase().equals(String.valueOf(letra).toLowerCase()))
+				{
+					resultado += String.format("%s\n", palabra);
+				}
+			}
+		}
+		return resultado;
+	}
+}

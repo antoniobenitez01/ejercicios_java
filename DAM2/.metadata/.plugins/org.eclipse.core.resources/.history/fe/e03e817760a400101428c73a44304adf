@@ -1,0 +1,17 @@
+package hilos;
+
+import java.util.Scanner;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		Scanner entrada = new Scanner(System.in);
+		String[] nombres = new String[3];
+		for(int i=0;i<5;i++) 
+		{
+			System.out.println(String.format("Introduzca el nombre Nº%d por teclado.", i+1));
+			nombres[i] = entrada.nextLine();
+		}
+	}
+}

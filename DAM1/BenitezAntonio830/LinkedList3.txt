@@ -1,0 +1,129 @@
+Grupo: 1º ESO A; Nombre: Balbuena Martín, Paola; Matemáticas: 3; Lengua: 3; Física: 7; Química: 3; Inglés: 4
+Grupo: 1º ESO A; Nombre: Bintana , Esteban Martín; Matemáticas: 4; Lengua: 3; Física: 4; Química: 4; Inglés: 5
+Grupo: 1º ESO A; Nombre: Carrillo Segura, Félix; Matemáticas: 6; Lengua: 6; Física: 8; Química: 2; Inglés: 8
+Grupo: 1º ESO A; Nombre: Cotilla Florido, Alberto; Matemáticas: 1; Lengua: 3; Física: 3; Química: 1; Inglés: 2
+Grupo: 1º ESO A; Nombre: Farfán Aguilar, Francisco; Matemáticas: 3; Lengua: 4; Física: 4; Química: 1; Inglés: 4
+Grupo: 1º ESO A; Nombre: Farfán Aguilar, Juan José; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 4
+Grupo: 1º ESO A; Nombre: Gallego Arellano, Daniela; Matemáticas: 6; Lengua: 6; Física: 8; Química: 5; Inglés: 6
+Grupo: 1º ESO A; Nombre: García Benítez, Nazareth; Matemáticas: 4; Lengua: 3; Física: 2; Química: 7; Inglés: 4
+Grupo: 1º ESO A; Nombre: García Navarro, Macarena; Matemáticas: 5; Lengua: 3; Física: 6; Química: 7; Inglés: 6
+Grupo: 1º ESO A; Nombre: González Pereau, Saray; Matemáticas: 5; Lengua: 6; Física: 6; Química: 4; Inglés: 7
+Grupo: 1º ESO A; Nombre: González Pérez, Antonio; Matemáticas: 8; Lengua: 9; Física: 8; Química: 5; Inglés: 6
+Grupo: 1º ESO A; Nombre: González Pérez, Laura; Matemáticas: 6; Lengua: 8; Física: 8; Química: 7; Inglés: 6
+Grupo: 1º ESO A; Nombre: Heredia Mesa, Pablo; Matemáticas: 3; Lengua: 4; Física: 5; Química: 5; Inglés: 6
+Grupo: 1º ESO A; Nombre: Jiménez Benítez, Francheska; Matemáticas: 2; Lengua: 1; Física: 4; Química: 5; Inglés: 3
+Grupo: 1º ESO A; Nombre: Martínez Ruiz, Mónica; Matemáticas: 1; Lengua: 2; Física: 3; Química: 4; Inglés: 3
+Grupo: 1º ESO A; Nombre: Peralta , Maximiliano; Matemáticas: 4; Lengua: 2; Física: 3; Química: 1; Inglés: 3
+Grupo: 1º ESO A; Nombre: Plaza Gallego, Juan; Matemáticas: 1; Lengua: 1; Física: 3; Química: 1; Inglés: 1
+Grupo: 1º ESO A; Nombre: Pérez Pellisero, Braian; Matemáticas: 6; Lengua: 4; Física: 6; Química: 5; Inglés: 7
+Grupo: 1º ESO A; Nombre: Rielves Barea, Manuel; Matemáticas: 5; Lengua: 6; Física: 7; Química: 1; Inglés: 5
+Grupo: 1º ESO A; Nombre: Rueda Cruz, María; Matemáticas: 6; Lengua: 5; Física: 6; Química: 5; Inglés: 5
+Grupo: 1º ESO A; Nombre: Ruiz Jiménez, Rafael; Matemáticas: 5; Lengua: 1; Física: 7; Química: 5; Inglés: 6
+Grupo: 1º ESO A; Nombre: Russell , Natalie; Matemáticas: 4; Lengua: 4; Física: 4; Química: 5; Inglés: 5
+Grupo: 1º ESO A; Nombre: Vilches Moreno, Lola Isabel; Matemáticas: 9; Lengua: 9; Física: 7; Química: 6; Inglés: 9
+Grupo: 1º ESO A; Nombre: Virella Robles, Carolina; Matemáticas: 4; Lengua: 4; Física: 5; Química: 4; Inglés: 5
+Grupo: 1º ESO B; Nombre: Aguilera Delgado, Enrique; Matemáticas: 8; Lengua: 8; Física: 9; Química: 6; Inglés: 8
+Grupo: 1º ESO B; Nombre: Benítez Gaitán, Juan Cruz; Matemáticas: 5; Lengua: 6; Física: 8; Química: 3; Inglés: 6
+Grupo: 1º ESO B; Nombre: Cordero Benítez, Alejandro; Matemáticas: 2; Lengua: 3; Física: 2; Química: 1; Inglés: 4
+Grupo: 1º ESO B; Nombre: Cruz Pino, Raquel; Matemáticas: 4; Lengua: 6; Física: 4; Química: 5; Inglés: 4
+Grupo: 1º ESO B; Nombre: Domínguez Tirado, José; Matemáticas: 5; Lengua: 6; Física: 9; Química: 5; Inglés: 6
+Grupo: 1º ESO B; Nombre: Donaire Rodríguez, Miguel Ángel; Matemáticas: 6; Lengua: 4; Física: 8; Química: 2; Inglés: 7
+Grupo: 1º ESO B; Nombre: Donaire Vergara, Eva María; Matemáticas: 6; Lengua: 5; Física: 5; Química: 3; Inglés: 7
+Grupo: 1º ESO B; Nombre: Duarte Durán, Alba; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 3
+Grupo: 1º ESO B; Nombre: Durán , Mariano; Matemáticas: 6; Lengua: 4; Física: 6; Química: 2; Inglés: 3
+Grupo: 1º ESO B; Nombre: El Mazani , Mohammed; Matemáticas: 3; Lengua: 4; Física: 5; Química: 5; Inglés: 3
+Grupo: 1º ESO B; Nombre: Garrido Delgado, Pablo; Matemáticas: 3; Lengua: 4; Física: 7; Química: 3; Inglés: 6
+Grupo: 1º ESO B; Nombre: Guerra Cano, Tamara; Matemáticas: 1; Lengua: 3; Física: 3; Química: 5; Inglés: 2
+Grupo: 1º ESO B; Nombre: Hurtado García, Carmen María; Matemáticas: 4; Lengua: 4; Física: 4; Química: 5; Inglés: 3
+Grupo: 1º ESO B; Nombre: Lima Franco, Laura; Matemáticas: 4; Lengua: 2; Física: 5; Química: 1; Inglés: 3
+Grupo: 1º ESO B; Nombre: Luque González, Christian; Matemáticas: 10; Lengua: 9; Física: 9; Química: 5; Inglés: 6
+Grupo: 1º ESO B; Nombre: Martín Aguilar, Paula María; Matemáticas: 2; Lengua: 3; Física: 5; Química: 4; Inglés: 4
+Grupo: 1º ESO B; Nombre: Martínez Calderero, Aarón; Matemáticas: 6; Lengua: 4; Física: 5; Química: 1; Inglés: 6
+Grupo: 1º ESO B; Nombre: Martínez Martín, Fabiola; Matemáticas: 2; Lengua: 2; Física: 4; Química: 1; Inglés: 5
+Grupo: 1º ESO B; Nombre: Morales Flores, Víctor; Matemáticas: 1; Lengua: 2; Física: 1; Química: 1; Inglés: 1
+Grupo: 1º ESO B; Nombre: Peula Cordero, Yazmina; Matemáticas: 5; Lengua: 6; Física: 4; Química: 5; Inglés: 5
+Grupo: 1º ESO B; Nombre: Ramírez Farfán, Carmen; Matemáticas: 7; Lengua: 7; Física: 4; Química: 4; Inglés: 6
+Grupo: 1º ESO B; Nombre: Requena Carrasco, Rafael; Matemáticas: 1; Lengua: 4; Física: 4; Química: 5; Inglés: 2
+Grupo: 1º ESO B; Nombre: Robles Ortiz, Sofía; Matemáticas: 5; Lengua: 4; Física: 6; Química: 5; Inglés: 7
+Grupo: 1º ESO B; Nombre: Rueda Calzada, Laura; Matemáticas: 9; Lengua: 8; Física: 9; Química: 5; Inglés: 7
+Grupo: 1º ESO B; Nombre: Salado Arcas, María del Carmen; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 3
+Grupo: 1º ESO B; Nombre: Salas Márquez, Jennifer; Matemáticas: 1; Lengua: 3; Física: 4; Química: 1; Inglés: 3
+Grupo: 1º ESO B; Nombre: Sánchez Ortiz, Álvaro José; Matemáticas: 6; Lengua: 6; Física: 9; Química: 3; Inglés: 6
+Grupo: 1º ESO C; Nombre: Aranda Vázquez, José; Matemáticas: 3; Lengua: 3; Física: 3; Química: 1; Inglés: 2
+Grupo: 1º ESO C; Nombre: Benedetti , Débora; Matemáticas: 2; Lengua: 2; Física: 4; Química: 5; Inglés: 2
+Grupo: 1º ESO C; Nombre: Caro Ruiz, Melany; Matemáticas: 2; Lengua: 2; Física: 5; Química: 1; Inglés: 4
+Grupo: 1º ESO C; Nombre: Castillo Alcázar, Alejandro; Matemáticas: 4; Lengua: 7; Física: 5; Química: 3; Inglés: 5
+Grupo: 1º ESO C; Nombre: Cordón López, Rocío; Matemáticas: 3; Lengua: 3; Física: 4; Química: 1; Inglés: 2
+Grupo: 1º ESO C; Nombre: Fernández Rico, Paula; Matemáticas: 2; Lengua: 3; Física: 3; Química: 1; Inglés: 3
+Grupo: 1º ESO C; Nombre: Jiménez Rueda, Marina; Matemáticas: 2; Lengua: 4; Física: 5; Química: 1; Inglés: 3
+Grupo: 1º ESO C; Nombre: Mantero González, Juan; Matemáticas: 8; Lengua: 4; Física: 5; Química: 1; Inglés: 5
+Grupo: 1º ESO C; Nombre: Martín Soler, José Manuel; Matemáticas: 3; Lengua: 4; Física: 5; Química: 3; Inglés: 4
+Grupo: 1º ESO C; Nombre: Menaique Álvarez, Celia María; Matemáticas: 3; Lengua: 4; Física: 5; Química: 5; Inglés: 5
+Grupo: 1º ESO C; Nombre: Mora Castillo, Paola; Matemáticas: 5; Lengua: 4; Física: 5; Química: 5; Inglés: 4
+Grupo: 1º ESO C; Nombre: Ramírez Pérez, David; Matemáticas: 4; Lengua: 3; Física: 4; Química: 3; Inglés: 3
+Grupo: 1º ESO C; Nombre: Recchia , María Fiorella; Matemáticas: 4; Lengua: 3; Física: 3; Química: 1; Inglés: 5
+Grupo: 1º ESO C; Nombre: Rendón Alba, Jorge Luis; Matemáticas: 3; Lengua: 3; Física: 5; Química: 1; Inglés: 2
+Grupo: 1º ESO C; Nombre: Roberto Jaimes, Kelly Ximena; Matemáticas: 5; Lengua: 5; Física: 5; Química: 5; Inglés: 3
+Grupo: 1º ESO C; Nombre: Roberto Jaimes, Neila Fernanda; Matemáticas: 3; Lengua: 5; Física: 4; Química: 5; Inglés: 4
+Grupo: 1º ESO C; Nombre: Rodríguez Arroyo, Alba María; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 2
+Grupo: 1º ESO C; Nombre: Romero Farfán, Estefanía; Matemáticas: 2; Lengua: 2; Física: 3; Química: 1; Inglés: 1
+Grupo: 1º ESO C; Nombre: Rueda Vega, Ana Carmen; Matemáticas: 3; Lengua: 6; Física: 4; Química: 3; Inglés: 5
+Grupo: 1º ESO C; Nombre: Ruiz Rueda, Sebastián; Matemáticas: 3; Lengua: 3; Física: 6; Química: 3; Inglés: 3
+Grupo: 1º ESO C; Nombre: Salas Márquez, Desiree; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 4
+Grupo: 1º ESO C; Nombre: Salazar Carrera, Juana María; Matemáticas: 2; Lengua: 3; Física: 3; Química: 1; Inglés: 3
+Grupo: 1º ESO C; Nombre: Tomé Cordero, Virginia; Matemáticas: 2; Lengua: 3; Física: 4; Química: 1; Inglés: 2
+Grupo: 1º ESO C; Nombre: Vegas Carrasco, María Encarnación; Matemáticas: 3; Lengua: 2; Física: 2; Química: 1; Inglés: 3
+Grupo: 1º ESO C; Nombre: Villar Risco, Omar; Matemáticas: 8; Lengua: 8; Física: 8; Química: 3; Inglés: 9
+Grupo: 1º ESO C; Nombre: Villatoro Postigo, Adrián; Matemáticas: 4; Lengua: 6; Física: 7; Química: 3; Inglés: 4
+Grupo: 1º ESO C; Nombre: Wilson , Luke; Matemáticas: 1; Lengua: 2; Física: 4; Química: 3; Inglés: 1
+Grupo: 1º ESO C; Nombre: Zoodsma Villalón, Natali; Matemáticas: 2; Lengua: 3; Física: 4; Química: 5; Inglés: 3
+Grupo: 1º ESO C; Nombre: Álvarez López, Nohemi; Matemáticas: 2; Lengua: 2; Física: 2; Química: 5; Inglés: 2
+Grupo: 1º ESO D; Nombre: Benítez Maya, Luciana; Matemáticas: 7; Lengua: 6; Física: 7; Química: 6; Inglés: 8
+Grupo: 1º ESO D; Nombre: Castillo Viñolo, Francisco; Matemáticas: 3; Lengua: 3; Física: 4; Química: 1; Inglés: 4
+Grupo: 1º ESO D; Nombre: Cruz Portillo, Francisco; Matemáticas: 2; Lengua: 3; Física: 4; Química: 4; Inglés: 3
+Grupo: 1º ESO D; Nombre: Fontaneda Macías, Borja; Matemáticas: 7; Lengua: 7; Física: 7; Química: 5; Inglés: 4
+Grupo: 1º ESO D; Nombre: García Bernal, María Esther; Matemáticas: 9; Lengua: 8; Física: 9; Química: 5; Inglés: 8
+Grupo: 1º ESO D; Nombre: García López, Elena; Matemáticas: 6; Lengua: 7; Física: 6; Química: 5; Inglés: 7
+Grupo: 1º ESO D; Nombre: García Romero, Álvaro; Matemáticas: 3; Lengua: 4; Física: 6; Química: 5; Inglés: 4
+Grupo: 1º ESO D; Nombre: García Sánchez, Carmen; Matemáticas: 4; Lengua: 3; Física: 4; Química: 1; Inglés: 7
+Grupo: 1º ESO D; Nombre: González Bernal, Cristóbal; Matemáticas: 4; Lengua: 6; Física: 7; Química: 5; Inglés: 7
+Grupo: 1º ESO D; Nombre: Hernández Jack, Irene; Matemáticas: 4; Lengua: 4; Física: 6; Química: 5; Inglés: 8
+Grupo: 1º ESO D; Nombre: López Muro, Rosario; Matemáticas: 3; Lengua: 3; Física: 4; Química: 4; Inglés: 3
+Grupo: 1º ESO D; Nombre: Navarro García, María Azahara; Matemáticas: 4; Lengua: 3; Física: 5; Química: 3; Inglés: 7
+Grupo: 1º ESO D; Nombre: Núñez Ramírez, Paula; Matemáticas: 3; Lengua: 2; Física: 4; Química: 4; Inglés: 4
+Grupo: 1º ESO D; Nombre: Reina Romero, José Daniel; Matemáticas: 8; Lengua: 6; Física: 9; Química: 4; Inglés: 4
+Grupo: 1º ESO D; Nombre: Sales Briales, Paloma; Matemáticas: 4; Lengua: 4; Física: 6; Química: 1; Inglés: 4
+Grupo: 1º ESO D; Nombre: Serrano Castillo, José Antonio; Matemáticas: 2; Lengua: 4; Física: 9; Química: 3; Inglés: 5
+Grupo: 1º ESO D; Nombre: Sánchez López, Alba; Matemáticas: 3; Lengua: 2; Física: 4; Química: 3; Inglés: 4
+Grupo: 1º ESO D; Nombre: Vargas Santiago, Samuel; Matemáticas: 1; Lengua: 1; Física: 3; Química: 1; Inglés: 1
+Grupo: 1º ESO D; Nombre: Álvarez Rodríguez, Dayana Vanessa; Matemáticas: 6; Lengua: 5; Física: 6; Química: 5; Inglés: 6
+Grupo: 1º ESO E; Nombre: Abdeselam Blanco, Hillary; Matemáticas: 7; Lengua: 4; Física: 8; Química: 5; Inglés: 6
+Grupo: 1º ESO E; Nombre: Amaya Guillén, José Pablo; Matemáticas: 5; Lengua: 6; Física: 4; Química: 5; Inglés: 5
+Grupo: 1º ESO E; Nombre: Artacho Silva, Mar; Matemáticas: 6; Lengua: 6; Física: 8; Química: 6; Inglés: 8
+Grupo: 1º ESO E; Nombre: Becerra García, Javier; Matemáticas: 5; Lengua: 5; Física: 7; Química: 3; Inglés: 5
+Grupo: 1º ESO E; Nombre: Benítez Berenjeno, Laura; Matemáticas: 9; Lengua: 8; Física: 7; Química: 6; Inglés: 9
+Grupo: 1º ESO E; Nombre: Bernat Rodríguez, Sandra; Matemáticas: 7; Lengua: 4; Física: 6; Química: 1; Inglés: 7
+Grupo: 1º ESO E; Nombre: Bravo Guzmán, Mireya; Matemáticas: 4; Lengua: 4; Física: 6; Química: 5; Inglés: 5
+Grupo: 1º ESO E; Nombre: Cañas Arcos, Esther; Matemáticas: 7; Lengua: 6; Física: 7; Química: 5; Inglés: 9
+Grupo: 1º ESO E; Nombre: Cecilio Gibaja, Sara; Matemáticas: 4; Lengua: 3; Física: 4; Química: 2; Inglés: 3
+Grupo: 1º ESO E; Nombre: Delgado Rodríguez, Daniel; Matemáticas: 8; Lengua: 6; Física: 6; Química: 5; Inglés: 6
+Grupo: 1º ESO E; Nombre: Farfán González, María de la Paloma; Matemáticas: 4; Lengua: 4; Física: 7; Química: 5; Inglés: 5
+Grupo: 1º ESO E; Nombre: Moreno Santamaría, José Luis; Matemáticas: 3; Lengua: 3; Física: 6; Química: 4; Inglés: 3
+Grupo: 1º ESO E; Nombre: Moreno Vázquez, Tomás; Matemáticas: 6; Lengua: 7; Física: 7; Química: 5; Inglés: 6
+Grupo: 1º ESO E; Nombre: Muñoz Bellido, Sandra; Matemáticas: 3; Lengua: 2; Física: 4; Química: 1; Inglés: 3
+Grupo: 1º ESO E; Nombre: Perea Sierra, Antonio Mateo; Matemáticas: 4; Lengua: 5; Física: 7; Química: 3; Inglés: 3
+Grupo: 1º ESO E; Nombre: Plaza Pérez, Nuria María; Matemáticas: 6; Lengua: 4; Física: 8; Química: 3; Inglés: 6
+Grupo: 1º ESO E; Nombre: Postigo Vázquez, Salvador; Matemáticas: 3; Lengua: 6; Física: 5; Química: 3; Inglés: 4
+Grupo: 1º ESO E; Nombre: Prieto Granja, Alicia; Matemáticas: 4; Lengua: 3; Física: 4; Química: 4; Inglés: 3
+Grupo: 1º ESO E; Nombre: Puertas Moreno, Andrea; Matemáticas: 6; Lengua: 6; Física: 6; Química: 3; Inglés: 6
+Grupo: 1º ESO E; Nombre: Rico Pinazo, Pedro; Matemáticas: 9; Lengua: 9; Física: 10; Química: 5; Inglés: 10
+Grupo: 1º ESO E; Nombre: Rodríguez Baro, Irene; Matemáticas: 4; Lengua: 6; Física: 6; Química: 5; Inglés: 7
+Grupo: 1º ESO E; Nombre: Rodríguez Horcajo, Noelia; Matemáticas: 8; Lengua: 9; Física: 7; Química: 4; Inglés: 9
+Grupo: 1º ESO E; Nombre: Rodríguez Márquez, Ezequiel; Matemáticas: 8; Lengua: 8; Física: 8; Química: 5; Inglés: 9
+Grupo: 1º ESO E; Nombre: Romero González, Nazaret; Matemáticas: 7; Lengua: 4; Física: 6; Química: 4; Inglés: 7
+Grupo: 1º ESO E; Nombre: Rueda Blanco, Oscar; Matemáticas: 7; Lengua: 8; Física: 8; Química: 5; Inglés: 8
+Grupo: 1º ESO E; Nombre: Serrano Doña, Ismael; Matemáticas: 7; Lengua: 8; Física: 7; Química: 6; Inglés: 7
+Grupo: 1º ESO E; Nombre: Solano Garrido, Alberto; Matemáticas: 5; Lengua: 3; Física: 4; Química: 2; Inglés: 3
+Grupo: 1º ESO E; Nombre: Solera Benítez, Paola; Matemáticas: 5; Lengua: 5; Física: 6; Química: 4; Inglés: 5
+Grupo: 1º ESO E; Nombre: Sánchez Solano, Ana Tadea; Matemáticas: 7; Lengua: 8; Física: 7; Química: 4; Inglés: 9
+Grupo: 1º ESO E; Nombre: Vega Jiménez, Ana María; Matemáticas: 6; Lengua: 7; Física: 6; Química: 4; Inglés: 3

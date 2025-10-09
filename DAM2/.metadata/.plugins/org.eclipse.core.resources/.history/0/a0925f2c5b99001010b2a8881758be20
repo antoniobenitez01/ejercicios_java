@@ -1,0 +1,9 @@
+package sincronizacion;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		ProcessBuilder argumento = new ProcessBuilder(args);
+	}
+}

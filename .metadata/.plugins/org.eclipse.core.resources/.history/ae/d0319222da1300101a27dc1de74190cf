@@ -1,0 +1,290 @@
+/*
+ * Programa que hace uso de la clase creada Contacto
+ * y de colecciones TreeSet para simular el comportamiento de una agenda
+ * Excepciones: InputMismatchException
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 20/03/2025
+ */
+package ejercicio2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.TreeSet;
+
+import ejercicio2.Llamada.Tipos;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		//INICIALIZACIÓN ---------------------------------------------------------------------------------------------------------------
+		
+		Scanner entradaTeclado = new Scanner(System.in);
+		
+		//CREACIÓN DE COLECCIÓN --------------------------------------------------------------------------------------------------------
+		
+		TreeSet<Contacto> agenda = new TreeSet<Contacto>();
+		
+		/*agenda.add(new Contacto("Maria Jose", "C/Lorca", "968576765", "email@mail.com", LocalDate.of(1999, 1, 1)));
+		agenda.add(new Contacto("José", "C/Pinto", "987865856", "email@mail.com", LocalDate.of(2001, 10, 10)));
+		agenda.add(new Contacto("Pedro", "C/Vinto", "987657678", "email@mail.com", LocalDate.of(2005, 5, 5)));
+		agenda.add(new Contacto("Claudia", "C/Roca", "365756867", "email@mail.com", LocalDate.of(1976, 3, 6)));
+		agenda.add(new Contacto("María", "C/Piedra", "34567667", "email@mail.com", LocalDate.of(1978, 11, 9)));
+		agenda.add(new Contacto("Antonio", "C/Agua", "9687687124", "email@mail.com", LocalDate.of(1987, 12, 18)));
+		agenda.add(new Contacto("Francisco", "C/Cielo", "945654321", "email@mail.com", LocalDate.of(1989, 8, 22)));
+		agenda.add(new Contacto("Jorge", "C/Turmalina", "987656754", "email@mail.com", LocalDate.of(1876, 6, 5)));
+		agenda.add(new Contacto("Cármen", "C/Azufre", "976234976", "email@mail.com", LocalDate.of(2006, 1, 15)));
+		agenda.add(new Contacto("Federico", "C/Esmeralda", "999999999", "email@mail.com", LocalDate.of(2010, 7, 25)));
+		
+		// PROGRAMA --------------------------------------------------------------------------------------------------------------------
+		
+		System.out.println("\n=== COLECCIONES EJERCICIO 2: AGENDA ===");
+		
+		int opcion;
+		do
+		{
+			opcion = menuPrincipal(entradaTeclado);
+			switch(opcion)
+			{
+			case 1: // INGRESAR DATOS --------------------------------------------------------------------------------
+				Contacto contactoTeclado = crearContacto(entradaTeclado);
+				agenda.add(contactoTeclado);
+				break;
+			case 2: // CONSULTAR POR NOMBRE --------------------------------------------------------------------------
+				System.out.println("Introduzca el nombre a buscar");
+				String nombreTeclado = entradaTeclado.nextLine();
+				boolean nameFlag = false;
+				for(Contacto i:agenda)
+				{
+					if(nombreTeclado.equals(i.getNombre()))
+					{
+						System.out.printf("%s\n", i.toString());
+						nameFlag = true;
+					}
+				}
+				if(nameFlag == false)
+				{
+					System.out.println("No se ha encontrado ningún contacto con la misma fecha de nacimiento.");
+				}
+				break;
+			case 3: // MOSTRAR DATOS DE AGENDA ---------------------------------------------------------------------
+				int contador = 1;
+				for(Contacto i:agenda)
+				{
+					System.out.printf("%d. %s\n", contador, i.toString());
+					contador++;
+				}
+				break;
+			case 4: // BUSCAR POR FECHA DE NACIMIENTO --------------------------------------------------------------
+				LocalDate fechaInput = inputDate(entradaTeclado);
+				boolean dateFlag = false;
+				for(Contacto i:agenda)
+				{
+					if(fechaInput.equals(i.getFechaNac()))
+					{
+						System.out.printf("%s\n", i.toString());
+						dateFlag = true;
+					}
+				
+				}
+				if(dateFlag == false)
+				{
+					System.out.println("No se ha encontrado ningún contacto con la misma fecha de nacimiento.");
+				}
+				break;
+			case 5: // SALIR DEL PROGRAMA --------------------------------------------------------------------------
+				System.out.println("Saliendo del programa ...");
+				break;
+			}
+		}while(opcion != 5);*/
+		
+		//FIN PROGRAMA -----------------------------------------------------------------------------------------------------------
+		
+		//EXTRA: IMPORTAR CONTACTOS
+		importarContactos(agenda, "agenda.txt");
+		
+		importarLlamadas(agenda, "llamadas.txt");
+		for(Contacto i: agenda)
+		{
+			System.out.printf("= CONTACTO ="
+					+ "\n%s\n\n", i.toString());
+			if(!i.getRegistroLlamadas().isEmpty())
+			{
+				System.out.printf("- LLAMADAS -"+ "\n%s\n", i.llamadasToString());
+			}
+		}
+	}
+	
+	private static void importarContactos(TreeSet<Contacto> agenda, String ruta)
+	{
+		File archivo = new File("agenda.txt");
+		Scanner lector = null;
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		try 
+		{
+			 lector = new Scanner(archivo);
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+		while(lector.hasNext())
+		{
+			String[] datos = lector.nextLine().split(";");
+			agenda.add(new Contacto(datos[0], datos[1], datos[2], datos[3], LocalDate.parse(datos[4], formato)));
+		}
+	}
+	
+	private static void importarLlamadas(TreeSet<Contacto> agenda, String ruta)
+	{
+		File archivo = new File(ruta);
+		Scanner lector = null;
+		try 
+		{
+			 lector = new Scanner(archivo);
+			while(lector.hasNext())
+			{
+				String[] datos = lector.nextLine().split(";");
+				Contacto encontrado = buscarTelefono(agenda, datos[0]);
+				if(encontrado != null)
+				{
+					Tipos tipo;
+					if(datos[2].equals("1"))
+					{
+						tipo = Tipos.ENTRANTE;
+					}else
+					{
+						tipo = Tipos.SALIENTE;
+					}
+					encontrado.anadirLlamada(new Llamada(LocalDateTime.parse(datos[1]),tipo));
+				}
+			}
+		} catch (FileNotFoundException e) 
+		{
+			System.out.printf("%s\n", e.getMessage());
+		}
+	}
+	
+	private static Contacto buscarTelefono(TreeSet<Contacto> agenda, String telefono)
+	{
+		Contacto encontrado = null;
+		int contador = 0;
+		Contacto[] contactos = (Contacto[]) agenda.toArray();
+		while(encontrado == null && contador < agenda.size())
+		{
+			if(contactos[contador].getTelefono().equals(telefono))
+			{
+				encontrado = contactos[contador];
+			}
+			contador++;
+		}
+		for(Contacto i: agenda)
+		{
+			if(i.getTelefono().equals(telefono))
+			{
+				encontrado = i;
+			}
+		}
+		return encontrado;
+	}
+	
+	/*
+	//CREAR CONTACTO - Crea y devuelve un objeto Contacto
+	private static Contacto crearContacto(Scanner entradaTeclado)
+	{
+		System.out.println("Introduzca el nombre del contacto.");
+		String nombreTeclado = entradaTeclado.nextLine();
+		
+		System.out.println("Introduzca la dirección del contacto.");
+		String direccionTeclado = entradaTeclado.nextLine();
+		
+		System.out.println("Introduzca el número de teléfono del contacto.");
+		String telefonoTeclado = entradaTeclado.nextLine();
+		
+		System.out.println("Introduzca el e-mail del contacto");
+		String emailTeclado = entradaTeclado.nextLine();
+		
+		System.out.println("Configurando la fecha de nacimiento del contacto");
+		LocalDate fechaTeclado = inputDate(entradaTeclado);
+		
+		Contacto contactoTeclado = new Contacto(nombreTeclado, direccionTeclado, telefonoTeclado, emailTeclado, fechaTeclado);
+		return contactoTeclado;
+	}
+	
+	//INPUT DATE - Devuelve un objeto LocalDate a través de una fecha introducida por teclado
+	private static LocalDate inputDate(Scanner entradaTeclado)
+	{
+		String fechaString;
+		LocalDate fechaIntroducida = null;
+		boolean fechaCorrecta = false;
+		
+		//BUCLE - Do While para asegurarse de que se introduce la fecha correctamente por teclado
+		do
+		{
+			//EXCEPCIÓN - DateTimeParseException - Devuelve un error cuando se introduce un fecha fuera del formato ISO
+			try
+			{
+				System.out.println("Introduzca una fecha por teclado (formato: YYYY-MM-DD)");
+				fechaString = entradaTeclado.nextLine();
+				fechaIntroducida = LocalDate.parse(fechaString);
+				fechaCorrecta = true;
+			}
+			catch(DateTimeParseException excepcion1)
+			{
+				System.out.println("La fecha introducida no es válida."+
+									"\nAsegúrese de que está siguiendo el formato correctamente.");
+			}
+		}while(fechaCorrecta == false);
+		
+		return fechaIntroducida;
+	}
+	
+	//MENÚ PRINCIPAL - Muestra el menú principal y devuelve la opción escogida por teclado
+	private static int menuPrincipal(Scanner entradaTeclado)
+	{
+		int opcion;
+		do // BUCLE - Do while que termina cuando se escoge una opción correctamente
+		{
+			System.out.println("\n=== || MENÚ PRINCIPAL || ==="+
+					"\n\n 1. Ingresar datos"+
+					"\n 2. Consultar un nombre"+
+					"\n 3. Mostrar todos los datos de agenda" +
+					"\n 4. Buscar por fecha de nacimiento" +
+					"\n 5. Salir del programa\n");
+			opcion = inputInt("Elija una opción:", entradaTeclado);
+			if(opcion < 1 || opcion > 5) // Opcion introducida no válida
+			{
+				System.out.println("Opción introducida no válida, inténtelo de nuevo.");
+			}
+		}while(opcion < 1 || opcion > 5);
+		return opcion;
+	}
+	
+	//INPUT INT - Recoge un mensaje String y un objeto Scanner, comprueba si se introduce un valor Integer correctamente
+	public static int inputInt(String mensaje, Scanner entrada)
+	{
+		int num = 0;
+		boolean inputTrue = false;
+		do
+		{
+			//EXCEPCIÓN - InputMismatchException - Bucle que asegura que el valor introducido es un valor decimal
+			try 
+			{
+				System.out.println(mensaje);
+				num = entrada.nextInt();
+				entrada.nextLine(); // Depuración Scanner
+				inputTrue = true;
+			} catch(InputMismatchException excepcion1)
+			{
+				System.out.println("Valor introducido incorrecto.");
+				entrada.nextLine(); // Depuración Scanner
+			}
+		}while(inputTrue == false);
+		return num;
+	}*/
+}

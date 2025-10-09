@@ -1,0 +1,17 @@
+package sincronizacion;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+		try
+		{
+			ProcessBuilder argumento = new ProcessBuilder(args);
+			Process argumentop = argumento.start();
+			System.out.println(String.format("Exit value: %d", argumentop.waitFor()));	
+		}catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+		}
+	}
+}

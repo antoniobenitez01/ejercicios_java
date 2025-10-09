@@ -1,0 +1,92 @@
+/*
+ * Clase que representa un Contacto de agenda
+ * Autor: Antonio Benítez Rodríguez
+ * Fecha: 21/03/2025
+ */
+package ejercicio2;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
+public class Contacto implements Comparable<Contacto>
+{
+	
+// ATRIBUTOS ------------------------------------------------------------------------
+	
+	private String nombre;
+	private String direccion;
+	private String telefono;
+	private String email;
+	private LocalDate fechaNac;
+	private ArrayList<Llamada> registroLlamadas;
+	
+// CONSTRUCTORES ---------------------------------------------------------------------
+	
+	//Constructor maestro (5 parámetros)	
+	public Contacto(String nombre, String direccion, String telefono, String email, LocalDate fechaNac)
+	{
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.email = email;
+		this.fechaNac = fechaNac;
+		this.registroLlamadas = new ArrayList<Llamada>();
+	}
+	
+// GETTERS --------------------------------------------------------------------------
+	
+	public String getNombre()
+	{
+		return this.nombre;
+	}
+	
+	public LocalDate getFechaNac()
+	{
+		return this.fechaNac;
+	}
+	
+	public String getTelefono()
+	{
+		return this.telefono;
+	}
+	
+// MÉTODOS ---------------------------------------------------------------------------
+	
+	//AÑADIR LLAMADA
+	public void anadirLlamada(Llamada l)
+	{
+		this.registroLlamadas.add(l);
+	}
+	
+	public String llamadasToString()
+	{
+		String resultado = "";
+		for(Llamada i: this.registroLlamadas)
+		{
+			resultado += String.format("%s\n", i.toString());
+		}
+		return resultado;
+	}
+	
+	//TO STRING - Devuelve un objeto String con la información detallada del Contacto
+	public String toString()
+	{
+		return String.format("Nombre: %s - Dirección: %s - Teléfono: %s - E-Mail: %s - Fecha de nacimiento: %s",
+				this.nombre, this.direccion, this.telefono, this.email, dateFormat(this.fechaNac));
+	}
+	
+	//DATE FORMAT - Introduce un objeto LocalDate por parámetro y lo devuelve formateado como un String
+	protected String dateFormat(LocalDate date)
+	{
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		return date.format(formato);
+	}
+
+	//COMPARE TO - Devuelve el resultado de compararse con otro objeto Contacto en base a su nombre
+	@Override
+	public int compareTo(Contacto c) 
+	{
+		return this.nombre.compareTo(c.getNombre());
+	}
+}

@@ -1,0 +1,66 @@
+package ejercicio1;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class EjercicioA1 
+{
+	public static void main(String[] args)
+	{
+		Scanner entradaTeclado = new Scanner(System.in);
+		File ruta;
+		String entrada = "";
+		do
+		{
+			System.out.println("Introduzca una ruta del sistema.");
+			entrada = entradaTeclado.nextLine();
+			ruta = new File(entrada);
+			try
+			{
+				muestraInfoRuta(ruta);
+			}catch(FileNotFoundException ex)
+			{
+				System.out.printf("%s\n",ex.getMessage());
+			}
+		}while(!entrada.isEmpty());
+	} 
+	
+	public static void muestraInfoRuta(File ruta) throws FileNotFoundException
+	{
+		Scanner lector;
+		try
+		{
+			lector = new Scanner(ruta);
+			if(ruta.isFile())
+			{
+				System.out.printf("Nombre del archivo: %s\n", ruta.getName());
+			}else if(ruta.isDirectory())
+			{
+				System.out.printf("Nombre del directorio: %s\n", ruta.getName());
+				try
+				{
+					File[] archivos = ruta.listFiles();
+					for(int i=0; i<archivos.length; i++)
+					{
+						System.out.printf("%s",archivos[i].getName());
+						if(archivos[i].isFile())
+						{
+							System.out.printf("[A]\n");
+						}else
+						{
+							System.out.printf("[*]\n");
+						}
+					}
+				}catch(SecurityException ex)
+				{
+					System.out.printf("%s\n",ex.getMessage());
+				}
+			}
+			lector.close();
+		}catch(FileNotFoundException ex)
+		{
+			throw new FileNotFoundException("La ruta no existe.");
+		}
+	}
+}

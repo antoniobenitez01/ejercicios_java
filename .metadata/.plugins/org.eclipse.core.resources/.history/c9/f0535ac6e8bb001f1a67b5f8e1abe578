@@ -1,0 +1,78 @@
+package ejercicio1;
+
+import libtarea3.Dado;
+
+public class Ejercicio1 
+{
+
+	public static void main(String[] args) 
+	{	
+		final int NUM_DADOS = 3;
+		final int NUM_LANZAMIENTOS = 15;
+		long sumaGlobal = 0, valorMaximo = (int) ((Math.random()*31)+30);
+		int dadoGanador = 0, ultimoLanzarGanador = 0;
+		Dado jugador1 = new Dado(), jugador2 = new Dado(), jugador3 = new Dado();
+		int [][] lanzamientos = new int[NUM_DADOS][NUM_LANZAMIENTOS];
+		int [] sumaLanzamientos = new int[NUM_DADOS];
+		
+		System.out.printf("LANZAMIENTO DE DADOS"+"\n---------------------------------------------" + "\n");
+		System.out.printf("Número máximo de puntos: %d"+"\n"+"\n", valorMaximo);
+		do
+		{
+			sumaGlobal += lanzamientos [0][(int) jugador1.getNumeroLanzamientos()] = jugador1.lanzar();
+			sumaGlobal += lanzamientos [1][(int) jugador2.getNumeroLanzamientos()] = jugador2.lanzar();
+			sumaGlobal += lanzamientos [2][(int) jugador3.getNumeroLanzamientos()] = jugador3.lanzar();
+		}while(sumaGlobal < valorMaximo);
+		
+		System.out.println("		  DADO1  DADO2  DADO3" + "\n");
+		for(int lanzar=0; lanzar<jugador1.getNumeroLanzamientos(); lanzar++)
+		{
+			System.out.printf("Lanzamiento nº %d:   ", (lanzar+1));
+			for(int dado=0; dado<NUM_DADOS; dado++)
+			{
+				System.out.print(lanzamientos[dado][lanzar] + "      ");
+			}
+			System.out.println("");
+		}
+		
+		for(int dado=0; dado<NUM_DADOS; dado++)
+		{
+			for(int lanzar=0; lanzar<jugador1.getNumeroLanzamientos(); lanzar++)
+			{
+				sumaLanzamientos[dado] += lanzamientos[dado][lanzar];
+			}
+		}
+		
+		dadoGanador = dadoGanador(sumaLanzamientos);
+		ultimoLanzarGanador = lanzamientos[dadoGanador][(int) (jugador1.getNumeroLanzamientos() - 1)];
+		System.out.printf("\nJuego Terminado. La suma de los lanzamientos es: %d", sumaGlobal);
+		System.out.printf("\nEl ganador es el dado %d con %d puntos en la última jugada.",
+				(dadoGanador + 1),ultimoLanzarGanador);
+		System.out.printf("\nEl valor %d ha salido %d veces en todo el juego y se han realizado un total de %d lanzamientos.",
+				ultimoLanzarGanador, Dado.getNumeroVecesCaraGlobal(ultimoLanzarGanador),Dado.getNumeroLanzamientosGlobal());
+		System.out.printf("Todos los lanzamientos del dado %d",dadoGanador);
+		switch(dadoGanador)
+		{
+		case 0:
+			break;
+		case 1:
+			break;
+		case 2:
+			break;
+		}
+	}
+
+	//MÉTODO - Recoge los tres dados para devolver el ganador con más puntuación
+	public static int dadoGanador(int [] sumaLanzamientos)
+	{
+		int dadoMayor = 0;
+		for(int dado = 1; dado<3;dado++)
+		{
+			if(sumaLanzamientos[dadoMayor] < sumaLanzamientos[dado])
+			{
+				dadoMayor = dado;
+			}
+		}
+		return dadoMayor;
+	}
+}
