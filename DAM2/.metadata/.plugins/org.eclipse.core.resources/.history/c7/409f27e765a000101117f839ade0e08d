@@ -1,5 +1,0 @@
-package herramientas;
-import java.sql.Connection;
-public class HerramientasSQL {
-
-}
