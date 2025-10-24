@@ -45,6 +45,7 @@ public class Main
 			}
 		}
 		long stop = System.currentTimeMillis();
+		// CÁLCULO TIEMPO DE EJECUCIÓN
 		System.out.println("SYSTEM STOP - CURRENT TIME MILLIS = " + stop);
 		System.out.println("CÁLCULO DE TIEMPO TOTAL EN SEGUNDOS = " + ((stop - start) / 1000) + " segundos");
 	}

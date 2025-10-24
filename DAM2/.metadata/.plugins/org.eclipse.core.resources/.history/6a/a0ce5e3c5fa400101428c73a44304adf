@@ -1,7 +1,0 @@
-package hilos;
-
-public class TareaThread implements Runnable 
-{
-	private String threadName;
-	
-}
