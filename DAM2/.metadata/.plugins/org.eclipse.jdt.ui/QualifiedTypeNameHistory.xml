@@ -11,4 +11,6 @@
     <fullyQualifiedTypeName name="net.hibernate.util.HibernateUtil"/>
     <fullyQualifiedTypeName name="net.hibernate.dao.ContactoDAO"/>
     <fullyQualifiedTypeName name="net.hibernate.dao.CancionDAO"/>
+    <fullyQualifiedTypeName name="net.hibernate.entity.Rating"/>
+    <fullyQualifiedTypeName name="net.hibernate.dao.VideogameDAO"/>
 </qualifiedTypeNameHistroy>
