@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module QuoteOfTheDay_AntonioBenitez {
+}
