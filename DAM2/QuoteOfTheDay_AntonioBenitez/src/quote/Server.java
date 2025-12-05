@@ -1,8 +1,6 @@
 package quote;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 import java.io.*;
 import java.net.*;
 
@@ -41,6 +39,7 @@ public class Server
 	public static void main(String[] args) 
 	{
 		File archivo = new File("quotes.txt");
+		System.out.println("FILE PATH: " + archivo.getAbsolutePath());
 		if(archivo.exists()) {
 			ArrayList<String> quotes = importarQuotes(archivo);
 			if(quotes.size() > 0) {
@@ -57,16 +56,21 @@ public class Server
 	// IMPORTAR QUOTES - Importa y devuelve las Quotes of the Day a partir de un archivo
 	private static ArrayList<String> importarQuotes(File archivo){
 		ArrayList<String> quotes = new ArrayList<String>();
+		BufferedReader reader;
 		try {
-			Scanner reader = new Scanner(archivo);
-			while(reader.hasNextLine()) {
-				String quote = reader.nextLine();
+			reader = new BufferedReader(new FileReader(archivo));
+			String quote = reader.readLine();
+			while(quote != null) {
 				if(!quote.isEmpty()) {
 					quotes.add(quote);
 				}
+				quote = reader.readLine();
 			}
+			reader.close();
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
+		} catch (IOException ex) {
+			System.out.println(ex.getMessage());
 		}
 		return quotes;
 	}
