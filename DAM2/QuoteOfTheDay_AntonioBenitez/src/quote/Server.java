@@ -1,37 +1,31 @@
 package quote;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.io.*;
 import java.net.*;
 
 public class Server 
 {
 	public static final int MAXIMUM_THREADS = 50;
+	private static final ExecutorService executor = Executors.newFixedThreadPool(MAXIMUM_THREADS);
 	
 	private Socket client = null;
 	private ServerSocket serverSocket = null;
-	private ArrayList<Thread> threads;
 	
 	public Server(int port, ArrayList<String> quotes) {
 		try {
 			serverSocket = new ServerSocket(port);
 			System.out.println("Servidor conectado en Puerto " + port);
-			threads = new ArrayList<Thread>();
 			while(true) {				
 				System.out.println("Esperando a Cliente ...");
 				client = serverSocket.accept();
 				System.out.println("Conexión aceptada (" + client.getLocalAddress() + ")");
-				if(threads.size() < MAXIMUM_THREADS) {
-					SocketThread thread = new SocketThread(client);
-					threads.add(thread);
-					thread.run();
-					thread.join();
-					threads.remove(thread);
-				}else {
-					System.out.println("ERROR: Límite excedido, por favor inténtelo de nuevo.");
-				}
+				SocketThread thread = new SocketThread(client);
+				executor.execute(thread);
 			}		
-		}catch(IOException | InterruptedException ex) {
+		}catch(IOException ex) {
 			System.out.println(ex.getMessage());
 		}
 	}
@@ -45,6 +39,7 @@ public class Server
 			if(quotes.size() > 0) {
 				SocketThread.quotes = quotes;
 				Server server = new Server(2017,quotes);
+				Server.executor.shutdown();
 			}else {
 				System.out.println("ERROR: La longitud de Quotes es 0.");
 			}

@@ -13,4 +13,5 @@
     <fullyQualifiedTypeName name="net.hibernate.entity.Rating"/>
     <fullyQualifiedTypeName name="net.hibernate.dao.VideogameDAO"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
 </qualifiedTypeNameHistroy>
