@@ -15,4 +15,5 @@
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
     <fullyQualifiedTypeName name="net.hibernate.dao.UsuarioDAO"/>
+    <fullyQualifiedTypeName name="com.mongodb.MongoException"/>
 </qualifiedTypeNameHistroy>
