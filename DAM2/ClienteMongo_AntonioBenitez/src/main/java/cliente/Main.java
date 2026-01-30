@@ -80,7 +80,7 @@ public class Main {
 					
 				case 4:	//	---		MODIFICAR GENERO
 					
-					String updateNombre = Common.inputString("Introduzca el NOMBRE del grupo a borrar", entrada);
+					String updateNombre = Common.inputString("Introduzca el NOMBRE del grupo a modificar", entrada);
 					Document updateDocument = collection.find(Filters.regex("nombre","^" + Pattern.quote(updateNombre) + "$","i")).first();
 					if(updateDocument == null) {
 						System.out.println("ERROR : No se ha encontrado el GRUPO introducido. Inténtelo de nuevo");
