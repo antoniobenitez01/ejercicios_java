@@ -21,7 +21,6 @@ public class UsuarioController {
 	public ResponseEntity<UsuarioDTO> createUsuario(@RequestBody UsuarioDTO usuarioDTO){
 		try {
 			UsuarioDTO usuarioCreado = usuarioService.createUsuario(usuarioDTO);
-			usuarioCreado.setContrasena(null);
 			return ResponseEntity.status(201).body(usuarioCreado);
 		}catch(IllegalArgumentException e) {
 			return ResponseEntity.status(409).body(null);
@@ -36,7 +35,7 @@ public class UsuarioController {
 			@RequestParam String contrasena){
 		try {
 			UsuarioDTO loggedUsuario = usuarioService.loginUsuario(email, contrasena);
-			return ResponseEntity.status(201).body(loggedUsuario);
+			return ResponseEntity.status(200).body(loggedUsuario);
 		}catch(ResourceNotFoundException | InvalidCredentialsException e) {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		}catch(Exception e) {
